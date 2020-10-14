@@ -1,0 +1,171 @@
+
+#grilla {
+   display: grid;
+   grid-template-areas:
+    "header nav nav"
+     "productos productos publicidad"
+     "servicios servicios publicidad"
+     "footer footer footer";
+   grid-template-rows: 200px 200px 200px; 
+   grid-template-columns: 100px 200px 300px;
+   grid-column-gap:5px;
+   grid-row-gap:5px;
+}
+.border {
+   border: 1px solid black;
+}
+.logo{
+  animation-duration: 4s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    color: red;
+  }
+}
+
+header {
+   grid-area: header;
+}
+footer {
+   grid-area: footer;
+}
+section#productos {
+   grid-area: productos;     
+}
+section#servicios {
+   grid-area: servicios;     
+}
+nav {
+   grid-area: nav;
+}
+aside {
+   grid-area: publicidad;
+}
+
+@media only screen and (max-width: 768px) {
+	#grilla {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .border {
+    	border: 4px solid black;
+    	background-color: black;
+     }
+     div h3{
+     	font-size: 15px;
+     	color:rgb(187,237,76);
+     	font-family:rubik;
+     }
+     div h1{
+     	font-size: 20px;
+     	color:rgb(187,237,76);
+     	font-family:rubik;
+     }
+
+}
+@media only screen and (min-width: 1024px) {
+	#grilla {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .border {
+    	border: 2px dashed rgb(187,237,76);
+    	background-color: black;
+     }
+      div h3{
+     	font-size: 30px;
+     	color:rgb(187,237,76);
+     	font-family:rubik;
+     }
+     div h1{
+     	font-size: 50px;
+     	color:rgb(187,237,76);
+     	font-family:rubik;
+     }
+ }
+
+ body{
+	background-color: grey;
+
+}
+
+a{
+	font-size: 30px;
+	text-decoration: none;
+	color: black;
+	font-family: rubik;
+}
+body {
+  padding: -4rem;
+  text-align: left;
+  background: #ffea80;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.title {
+  font-size: 7vw;
+}
+.title .title-part {
+  font-weight: 600;
+  font-family: "Fredoka One", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  color: #ffffd9;
+}
+.title .title-part.line-4 {
+  text-shadow: #035bb2 1px 1px, #055db2 2px 2px, #085eb1 3px 3px, #0a60b1 4px 4px, #0d61b0 5px 5px, #0f63b0 6px 6px, #1264af 7px 7px, #1466af 8px 8px, #1767ae 9px 9px, #1a68ae 10px 10px, #1c6aad 11px 11px, #1f6bad 12px 12px, #216dac 13px 13px, #246eac 14px 14px, #2670ab 15px 15px, #2971ab 16px 16px, #2b72aa 17px 17px, #2e74aa 18px 18px, #3075a9 19px 19px, #3377a9 20px 20px, #3678a8 21px 21px, #387aa8 22px 22px, #3b7ba7 23px 23px, #3d7da7 24px 24px, #407ea6 25px 25px, #427fa6 26px 26px, #4581a5 27px 27px, #4782a5 28px 28px, #4a84a4 29px 29px, #4d85a4 30px 30px, #4f87a3 31px 31px, #5288a3 32px 32px, #548aa2 33px 33px, #578ba2 34px 34px, #598ca1 35px 35px, #5c8ea1 36px 36px, #5e8fa0 37px 37px, #6191a0 38px 38px, #63929f 39px 39px, #66949f 40px 40px, #69959e 41px 41px, #6b969e 42px 42px, #6e989d 43px 43px, #70999d 44px 44px, #739b9c 45px 45px, #759c9c 46px 46px, #789e9b 47px 47px, #7a9f9b 48px 48px, #7da19a 49px 49px, #80a29a 50px 50px, #82a399 51px 51px, #85a598 52px 52px, #87a698 53px 53px, #8aa897 54px 54px, #8ca997 55px 55px, #8fab96 56px 56px, #91ac96 57px 57px, #94ae95 58px 58px, #96af95 59px 59px, #99b094 60px 60px, #9cb294 61px 61px, #9eb393 62px 62px, #a1b593 63px 63px, #a3b692 64px 64px, #a6b892 65px 65px, #a8b991 66px 66px, #abba91 67px 67px, #adbc90 68px 68px, #b0bd90 69px 69px, #b3bf8f 70px 70px, #b5c08f 71px 71px, #b8c28e 72px 72px, #bac38e 73px 73px, #bdc58d 74px 74px, #bfc68d 75px 75px, #c2c78c 76px 76px, #c4c98c 77px 77px, #c7ca8b 78px 78px, #c9cc8b 79px 79px, #cccd8a 80px 80px, #cfcf8a 81px 81px, #d1d089 82px 82px, #d4d289 83px 83px, #d6d388 84px 84px, #d9d488 85px 85px, #dbd687 86px 86px, #ded787 87px 87px, #e0d986 88px 88px, #e3da86 89px 89px, #e6dc85 90px 90px, #e8dd85 91px 91px, #ebde84 92px 92px, #ede084 93px 93px, #f0e183 94px 94px, #f2e383 95px 95px, #f5e482 96px 96px, #f7e682 97px 97px, #fae781 98px 98px, #fce981 99px 99px, #ffea80 100px 100px, #005ab3 0px 0px;
+}
+
+
+/*.grid {
+   display: grid;  
+		grid-template-columns: 300px 100px; 
+   		grid-template-rows: 40px 100px; 
+}
+.item{
+	background-color: red;
+	border: 1px dashed black
+}
+*p{
+	font-size: 30px;
+	text-decoration: none;
+	color: white;
+	font-family:Alata;
+	background-color: rgb(179,72,188);
+	font-size: 28px;
+	width: 430px;
+	height: 300px;
+	margin: 10px 20px; 
+	padding: 30px;
+	border: 5px dashed black;
+
+}
+}
+u{
+	font-size: 30px;
+	text-decoration: none;
+	color: blue;
+	font-family:Alata;
+}
+i{
+	font-size: 30px;
+	text-decoration: none;
+	color: grey;
+	font-family:Alata;
+}
+h2{
+	font-size: 40px;
+	text-decoration: none;
+	color: black;
+	font-family:Alata;
+}
+body{
+	background-color: rgb(251,237,228);
+
+}
