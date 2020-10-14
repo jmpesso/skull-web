@@ -1,2 +1,2 @@
 # skull-web
-esta es mi primer pagina web
+esta es mi primera pagina web
